@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Test</string>
+    <string name="titulo">Notebook HP Omen</string>
+    <string name="buscar">Buscar</string>
+</resources>
