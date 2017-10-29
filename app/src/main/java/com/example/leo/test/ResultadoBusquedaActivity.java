@@ -6,6 +6,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.TextView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
@@ -39,6 +40,23 @@ public class ResultadoBusquedaActivity extends AppCompatActivity{
     private void configurarListado() {
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         this.listado.setLayoutManager(layoutManager);
+
+        AdaptadorArticulos adapter = new AdaptadorArticulos();
+
+        List<Product> listadoDeProductos = new ArrayList<>();
+        listadoDeProductos.add(new Product("producto 1", "https://image.freepik.com/iconos-gratis/simbolo-de-un-telefono-auricular-en-un-circulo_318-50200.jpg"));
+        listadoDeProductos.add(new Product("lavarropas", "https://image.freepik.com/iconos-gratis/simbolo-de-un-telefono-auricular-en-un-circulo_318-50200.jpg"));
+        listadoDeProductos.add(new Product("producto 1", "https://image.freepik.com/iconos-gratis/simbolo-de-un-telefono-auricular-en-un-circulo_318-50200.jpg"));
+        listadoDeProductos.add(new Product("lavarropas", "https://image.freepik.com/iconos-gratis/simbolo-de-un-telefono-auricular-en-un-circulo_318-50200.jpg"));
+        listadoDeProductos.add(new Product("producto 1", "https://image.freepik.com/iconos-gratis/simbolo-de-un-telefono-auricular-en-un-circulo_318-50200.jpg"));
+        listadoDeProductos.add(new Product("lavarropas", "https://image.freepik.com/iconos-gratis/simbolo-de-un-telefono-auricular-en-un-circulo_318-50200.jpg"));
+        listadoDeProductos.add(new Product("producto 1", "https://image.freepik.com/iconos-gratis/simbolo-de-un-telefono-auricular-en-un-circulo_318-50200.jpg"));
+        listadoDeProductos.add(new Product("lavarropas", "https://image.freepik.com/iconos-gratis/simbolo-de-un-telefono-auricular-en-un-circulo_318-50200.jpg"));
+        listadoDeProductos.add(new Product("producto 1", "https://image.freepik.com/iconos-gratis/simbolo-de-un-telefono-auricular-en-un-circulo_318-50200.jpg"));
+        listadoDeProductos.add(new Product("lavarropas", "https://image.freepik.com/iconos-gratis/simbolo-de-un-telefono-auricular-en-un-circulo_318-50200.jpg"));
+        adapter.mostrarProductos(listadoDeProductos);
+
+        this.listado.setAdapter(adapter);
 
     }
 }

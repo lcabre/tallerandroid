@@ -17,6 +17,11 @@ class Product {
     @SerializedName("thumbnail")
     private String imagen;
 
+    public Product(String titulo, String url_imagen){
+        this.titulo = titulo;
+        this.imagen = url_imagen;
+    }
+
     public Long getPrecio() {
         return precio;
     }
